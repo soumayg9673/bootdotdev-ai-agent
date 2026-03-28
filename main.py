@@ -31,6 +31,7 @@ def main():
         print("Prompt tokens: ", response.usage_metadata.prompt_token_count)
         print("Response tokens: ",response.usage_metadata.candidates_token_count)
     print("Response: ", response.text)
+    
     for fc in response.function_calls:
         print(f"Calling function: {fc.name}({fc.args})")
 
